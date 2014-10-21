@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drag and drop</title>
+
+<link rel="stylesheet" href="css/story-page.css" type="text/css" />
+<script type="text/javascript" src="scripts/story-page.js"></script>
+
+</head>
+
+<body id="index">
+
+	<header id="banner" class="margincss">
+		<nav>
+			<ul>
+				<li class="active"><a href="#">Drag and drop</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+	</header>	
+	
+	<section id="logContainer" class="margincss">
+		<span>Messages</span>
+		<div id="log"></div>
+	</section>	
+	
+
+	<div id="mainContent" class="margincss">
+		<div id="board1" ondragover="allowDrop(event)" ondrop="drop(event)" >
+			<p>Drag the planets to the space.</p>
+			<p>Open other tabs or browsers to verify that the same behavior are replicated at real-time.</p>		
+		</div>	
+		<aside id="planets">
+			<span>Planets</span>
+			<img id="mars" src="images/planets/mars.png" draggable="true" ondragstart="drag(event)">
+			<img src="images/planets/neptune.png" draggable="true" ondragstart="drag(event)">
+			<img src="images/planets/venus.png" draggable="true" ondragstart="drag(event)">
+			<img src="images/planets/mercury.png" draggable="true" ondragstart="drag(event)">
+		</aside>
+		<canvas id="board" ondragover="allowDrop(event)" ondrop="drop(event)">
+		</canvas>
+	</div>
+	
+	<footer id="footer1" class="margincss">
+		Developed with HTML5, CSS3, JavaScript, WebSockets, JSON and Java EE.
+	</footer>		
+</body>
+</html>
+
